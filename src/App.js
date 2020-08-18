@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, withRouter, Redirect, Switch } from "react-router-dom";
 
-function App() {
+import Home from "./containers/Home";
+import Products from "./containers/Products";
+import Blog from "./containers/Blog";
+import Story from "./containers/Story";
+import ContactUs from "./containers/ContactUs";
+import Nav from "./containers/Nav/Nav";
+import Footer from "./containers/Footer";
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav history={props.history} />
+      <Switch>
+        <Route exact path={`/`} render={(routerProps) => <Home />} />
+        <Route
+          exact
+          path={`/products`}
+          render={(routerProps) => <Products />}
+        />
+        <Route exact path={`/blog`} render={(routerProps) => <Blog />} />
+        <Route exact path={`/our_story`} render={(routerProps) => <Story />} />
+        <Route
+          exact
+          path={`/contact_us`}
+          render={(routerProps) => <ContactUs />}
+        />
+        <Redirect to="/" />
+      </Switch>
+      <Footer />
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

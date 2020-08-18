@@ -1,0 +1,64 @@
+.navBarDesktop {
+  border-bottom: solid black;
+  padding: 0.3% 1%;
+  justify-content: space-between;
+  display: none;
+}
+
+.navBarDesktop span {
+  cursor: pointer;
+}
+
+.navLogo {
+  width: 15%;
+  cursor: pointer;
+}
+.navLogo img {
+  width: 25%;
+  min-width: 50px;
+}
+
+.navLinks {
+  width: 70%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.navIcons {
+  width: 15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.navIcons {
+  font-size: 160%;
+}
+.navLinks span {
+  font-size: 130%;
+}
+.navBarMobile .navLogo {
+  height: 9vh;
+}
+.navBarMobile .navLogo img {
+  margin: 0.2em;
+}
+.navBarMobile .navLinks {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  width: 98vw;
+  height: 89.9vh;
+  overflow: hidden;
+}
+.closedNav {
+  visibility: hidden;
+}
+@media only screen and (orientation: landscape) {
+  .navBarDesktop {
+    display: flex;
+  }
+  .navBarMobile {
+    display: none;
+  }
+}
