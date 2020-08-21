@@ -2,7 +2,7 @@ import React from "react";
 import { Route, withRouter, Redirect, Switch } from "react-router-dom";
 
 import Home from "./containers/Home";
-import Products from "./containers/Products";
+import Products from "./containers/Products/Products";
 import Blog from "./containers/Blog";
 import Story from "./containers/Story";
 import ContactUs from "./containers/ContactUs";

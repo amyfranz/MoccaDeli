@@ -1,0 +1,37 @@
+@font-face {
+  font-family: mainFont;
+  src: url(../../Assets/FjallaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: cursiveFont;
+  src: url(../../Assets/MeieScript-Regular.ttf);
+}
+
+.cursiveFont {
+  font-family: cursiveFont;
+}
+
+.mainFont {
+  font-family: mainFont;
+}
+
+.heading img {
+  width: 100vw;
+  height: 92vh;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.heading h1 {
+  height: 92vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: -92vh;
+  font-size: 600%;
+  justify-content: center;
+  text-align: center;
+  color: rgb(48, 47, 47);
+}

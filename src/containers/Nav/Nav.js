@@ -20,7 +20,11 @@ export default function Nav({ history }) {
           }}
         />
         <div className={openNav ? "openedNav" : "closedNav"}>
-          <NavLinks history={history} home={openNav} />
+          <NavLinks
+            history={history}
+            home={openNav}
+            toggleNav={() => setOpenNav(false)}
+          />
         </div>
       </div>
     </div>
