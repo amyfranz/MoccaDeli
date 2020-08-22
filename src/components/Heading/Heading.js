@@ -7,7 +7,7 @@ export default function Heading() {
     <div className="heading">
       <img src={HeadingPic} alt="" />
       <h1>
-        <span className="mainFont">Mocca's</span>
+        <span className="mainFont">Mocca</span>
         <span className="cursiveFont">Deli</span>
       </h1>
     </div>
