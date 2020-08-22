@@ -1,78 +1,74 @@
-import React from "react";
-import { SMTPClient } from "emailjs";
+import React, { useState } from "react";
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 export default function ContactUs() {
-  const client = new SMTPClient({
-    user: "amy.franz@gmail.com",
-    password: "AK47401english",
-    host: "smtp.gmail.com",
-    ssl: true,
-  });
+  let [email, setEmail] = useState("");
+  let [name, setName] = useState("");
+  let [message, setMessage] = useState("");
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", name, email, message }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
 
-  client.send(
-    {
-      text: "i hope this works",
-      from: "amy.franz@gmail.com",
-      to: "amy.franz@gmail.com",
-      subject: "testing emailjs",
-    },
-    (err, message) => {
-      console.log(err || message);
-    }
-  );
+    e.preventDefault();
+  };
+
   return (
     <div className="contactUs">
       <h2 className="title">Contact Us</h2>
       <div>
-        <div>
-          <div className="container">
-            <form>
-              <div className="row pt-5 mx-auto">
-                <div className="col-8 form-group mx-auto">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Name"
-                    name="name"
-                  />
-                </div>
-                <div className="col-8 form-group pt-2 mx-auto">
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Email Address"
-                    name="email"
-                  />
-                </div>
-                <div className="col-8 form-group pt-2 mx-auto">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Subject"
-                    name="subject"
-                  />
-                </div>
-                <div className="col-8 form-group pt-2 mx-auto">
-                  <textarea
-                    className="form-control"
-                    id=""
-                    cols="30"
-                    rows="8"
-                    placeholder="Your message"
-                    name="message"
-                  ></textarea>
-                </div>
-                <div className="col-8 pt-3 mx-auto">
-                  <input
-                    type="submit"
-                    className="btn btn-info"
-                    value="Send Message"
-                  ></input>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <p>
+            <label>
+              Your Name:{" "}
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email:{" "}
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:{" "}
+              <textarea
+                name="message"
+                value={message}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+              />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
         <div></div>
       </div>
     </div>
