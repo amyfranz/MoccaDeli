@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function NavLinks({ history, home, toggleNav }) {
+export default function NavLinks({ history, home, toggleNav = () => {} }) {
   return (
     <nav className="navLinks">
       {home ? (

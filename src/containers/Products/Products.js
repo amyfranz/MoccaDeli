@@ -8,6 +8,7 @@ export default function Products() {
   const arr = Array.from(Array(gridNum).keys());
   return (
     <div className="products">
+      <h2 className="title">Our Products</h2>
       {arr.map((i) => (
         <GridDisplay products={imgs.slice(i * 13, (i + 1) * 13)} key={i} />
       ))}

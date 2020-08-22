@@ -3,9 +3,9 @@ import { Route, withRouter, Redirect, Switch } from "react-router-dom";
 
 import Home from "./containers/Home";
 import Products from "./containers/Products/Products";
-import Blog from "./containers/Blog";
-import Story from "./containers/Story";
-import ContactUs from "./containers/ContactUs";
+import Blog from "./containers/Blog/Blog";
+import Story from "./containers/Story/Story";
+import ContactUs from "./containers/ContactUs/ContactUs";
 import Nav from "./containers/Nav/Nav";
 import Footer from "./containers/Footer";
 
