@@ -10,13 +10,31 @@ export default function NavIcons() {
   return (
     <div className="navIcons">
       <span>
-        <FontAwesomeIcon icon={faInstagram} />
+        <a
+          href="https://www.google.co.uk/maps/@51.4834763,-0.0117241,14z"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>
       </span>
       <span>
-        <FontAwesomeIcon icon={faFacebookF} />
+        <a
+          href="https://www.google.co.uk/maps/@51.4834763,-0.0117241,14z"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faFacebookF} />
+        </a>
       </span>
       <span>
-        <FontAwesomeIcon icon={faMediumM} />
+        <a
+          href="https://www.google.co.uk/maps/@51.4834763,-0.0117241,14z"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FontAwesomeIcon icon={faMediumM} />
+        </a>
       </span>
     </div>
   );

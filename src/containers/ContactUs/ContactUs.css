@@ -1,0 +1,101 @@
+.contactUs a {
+  color: black;
+  text-decoration: none;
+}
+
+.contactUs {
+  padding: 0 1em;
+  width: 97.8%;
+}
+
+a:hover {
+  color: blue;
+}
+
+.contactUsContent form {
+  width: 96vw;
+}
+
+.contactUsContent form h3 {
+  margin-bottom: 1em;
+  margin: 0 0 0.3em 0;
+  text-align: center;
+  font-size: 8vw;
+}
+
+.contactUsContent form input {
+  margin-bottom: 1em;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 0.3em;
+  border-radius: 3px;
+}
+
+.contactUsContent form input[type="submit"] {
+  width: 101%;
+  padding: 0.5em;
+  font-weight: 600;
+}
+.contactUsContent form textarea {
+  margin-bottom: 1em;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  height: 25vh;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contactUsInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 96vw;
+  margin-top: 2em;
+}
+
+.contactUsInfo h3 {
+  margin-bottom: 1em;
+  font-size: 6vw;
+  text-align: center;
+}
+
+.findUs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactUsInfo .icon {
+  font-size: 15vw;
+  padding: 0;
+  margin: 0;
+  width: 30%;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 1em;
+}
+@media only screen and (orientation: landscape) {
+  .contactUsContent form h3 {
+    font-size: 3vw;
+  }
+  .contactUsContent {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contactUsContent form {
+    width: 50vw;
+  }
+  .contactUsInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+  }
+
+  .contactUsInfo h3 {
+    margin-bottom: 1em;
+    font-size: 2vw;
+  }
+}
