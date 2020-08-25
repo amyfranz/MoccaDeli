@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import RenderPost from "../../components/RenderPost";
 import "./Blog.css";
+import { blogContent } from "../../String";
 
 export default function Blog() {
   let [blogs, setBlogs] = useState([]);
@@ -23,7 +24,7 @@ export default function Blog() {
   ));
   return (
     <div className="blog">
-      <h2 className="title">Our Blogs</h2>
+      <h2 className="title">{blogContent.heading}</h2>
       <div className="blogs">{showPosts}</div>
     </div>
   );

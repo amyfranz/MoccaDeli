@@ -1,14 +1,12 @@
 import React from "react";
 import "./HomeMission.css";
+import { homeContent } from "../../String";
 
 export default function HomeMission() {
   return (
     <div className="homeMission">
-      <h2>Our Mission</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <h2>{homeContent.missionTitle}</h2>
+      <p>{homeContent.mission}</p>
     </div>
   );
 }

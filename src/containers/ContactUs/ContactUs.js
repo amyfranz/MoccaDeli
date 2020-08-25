@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SiGooglemybusiness } from "react-icons/si";
 import "./ContactUs.css";
+import { contactUsContent } from "../../String";
 
 export default function ContactUs() {
   let [name, setName] = useState("");
@@ -50,7 +51,7 @@ export default function ContactUs() {
 
   return (
     <div className="contactUs">
-      <h2 className="title">Contact Us</h2>
+      <h2 className="title">{contactUsContent.heading}</h2>
       <div className="contactUsContent">
         <form
           id="javascript_form"
@@ -59,7 +60,7 @@ export default function ContactUs() {
             js_send(e);
           }}
         >
-          <h3>Enquiry:</h3>
+          <h3>{contactUsContent.formHeading}</h3>
           <input
             type="text"
             name="name"
@@ -95,12 +96,14 @@ export default function ContactUs() {
             }}
             placeholder="Message"
           ></textarea>
-          <input type="submit" id="js_send" value="Send Enquiry" />
+          <input type="submit" id="js_send" value={contactUsContent.formBtn} />
         </form>
         <div className="contactUsInfo">
-          <h3>Phone Us: +27 778 746 7544</h3>
+          <h3>
+            {contactUsContent.find1Heading} {contactUsContent.phoneNumber}
+          </h3>
           <div className="findUs">
-            <h3>Find Us: </h3>
+            <h3>{contactUsContent.find2Heading} </h3>
             <a
               href="https://www.google.com/search?sxsrf=ALeKk01WukuNnrhg8eOyiAwN5h7UxRPPnQ:1598092511671&source=hp&ei=3PRAX-KcEoT6U6TptNAC&q=shops%20near%20me&oq=shops+near+me&gs_lcp=CgZwc3ktYWIQAzIICAAQsQMQgwEyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BQgAELEDOgsILhCxAxDHARCjAjoCCC46CAguEMcBEKMCOggILhCxAxCDAToLCC4QsQMQxwEQrwE6BAgAEApQ4gZYoBRg-xVoAHAAeAGAAaQCiAHsE5IBBTAuNy42mAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=2ahUKEwiYuufDzq7rAhVPiFwKHdMyBfYQvS4wA3oECA0QLQ&uact=5&npsic=0&rflfq=1&rlha=0&rllag=51484862,-9073,439&tbm=lcl&rldimm=106502968409769360&lqi=Cg1zaG9wcyBuZWFyIG1lIgOQAQFaFgoFc2hvcHMiDXNob3BzIG5lYXIgbWU&phdesc=J2z6NfP_pwk&rldoc=1&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m1!1e2!2m1!1e16!2m1!1e3!3sIAE,lf:1,lf_ui:10&rlst=f#rlfi=hd:;si:106502968409769360,l,Cg1zaG9wcyBuZWFyIG1lIgOQAQFaFgoFc2hvcHMiDXNob3BzIG5lYXIgbWU,y,J2z6NfP_pwk;mv:[[51.497239099999994,0.0025031],[51.47967320000001,-0.0161153]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m1!1e2!2m1!1e16!2m1!1e3!3sIAE,lf:1,lf_ui:10"
               rel="noopener noreferrer"
@@ -111,7 +114,7 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-      <h4>17 Billson Street, London</h4>
+      <h4>{contactUsContent.address}</h4>
     </div>
   );
 }

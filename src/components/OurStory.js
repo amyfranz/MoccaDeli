@@ -1,20 +1,13 @@
 import React from "react";
 import OurStoryPic from "../Assets/OurStory.jpg";
+import { storyContent } from "../String";
 
 export default function OurStory() {
   return (
     <div className="ourStory section">
       <div className="writing">
-        <h2 className="title">Our Story</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h2 className="title">{storyContent.storyTitle}</h2>
+        <p>{storyContent.story}</p>
       </div>
       <img src={OurStoryPic} alt="" />
     </div>
